@@ -111,7 +111,9 @@ function showP(){
 		document.getElementById("A").innerHTML+=eval("`"+btn_temp+"`");
 	}
 	//setTimeout(() => hideP(0), 250);
+	document.getElementById("qjump").scrollIntoView({behavior: "smooth"});
 	enable=1;
+	
 }
 
 function nextP(){
