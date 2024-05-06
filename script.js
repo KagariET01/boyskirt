@@ -35,6 +35,7 @@ async function init(){//初始化
 	enable=0;
 	qlist=stoJSON(await readfile("./data.jsonc"));
 	btn_temp=await readfile("./button.html");
+	document.getElementById("st_btn").innerHTML="start";
 	enable=1
 }
 
