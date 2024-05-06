@@ -165,15 +165,13 @@ footer {
 
 .A>*{
 	display: flex;
-	flex-direction: column;
-	/*flex-wrap: wrap;*/
 	overflow: auto;
 	max-height: 100%;
-	min-height: 50%;
+	/* min-height: 50%; */
 	height: auto;
 	width: 100%;
 	transition: all 1s cubic-bezier(.2, .8, .2, .8);
-	justify-content: space-evenly;
+	flex-direction: column;
 }
 
 .neon_border{
