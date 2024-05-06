@@ -61,6 +61,10 @@ div{
 	border-radius: 8px;
 }
 
+a,a:visited,a:active,a:hover{
+	color:#0ff;
+}
+
 .op,
 .form,
 .res {
