@@ -134,26 +134,20 @@ footer {
 	/* z-index: 1; */
 	/*background-color: #0f08;*/
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-items: stretch;
-	align-content: center;
 	padding: 0.5em;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .Q>*{
 	padding: 1em;
-	display: flex;
-	flex-direction: column;
-	/*flex-wrap: wrap;*/
+	/* display: flex; */
 	overflow: auto;
-	max-height: 100%;
-	min-height: 50%;
+	/* max-height: 100%; */
+	/* min-height: 50%; */
 	height: auto;
 	width: 100%;
-	align-content: center;
 	transition: all 1s cubic-bezier(.2, .8, .2, .8);
-	justify-content: space-evenly;
 }
 
 .A {
