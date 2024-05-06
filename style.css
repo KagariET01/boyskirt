@@ -19,9 +19,10 @@ html {
 }
 
 .box{
-	background-color: #0006;
+	background-color: #000a;
 	border:#fff 4px solid;
 	color: #fff;
+	border-radius: 8px;
 }
 body {
 	margin: 0;
@@ -123,6 +124,12 @@ footer {
 	padding: .5em;
 	margin: .5em;
 	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-evenly;
+	width: -webkit-fill-available;
 }
 
 .form_sub{
