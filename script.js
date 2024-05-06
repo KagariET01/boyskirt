@@ -1,5 +1,5 @@
 
-async function readfile(URL){//傳入網址，回傳該檔案內容
+async function readfile(URL){
 	console.debug("[DBG]fetching file: \""+URL+"\"");
 	let fe=await fetch(URL);
 	data=await fe.text();
@@ -13,7 +13,7 @@ function stoJSON(str){
 	return eval("("+str+")");
 }
 
-function stoHTML(str){//將字串轉換成HTML
+function stoHTML(str){
 	let re=document.createElement('div');
 	re.innerHTML=str.trim();
 	return re;
@@ -31,11 +31,19 @@ function reset(){
 	score={};
 }
 
-async function init(){//初始化
+async function init(){
 	enable=0;
 	qlist=stoJSON(await readfile("./data.jsonc"));
 	btn_temp=await readfile("./button.html");
 	document.getElementById("st_btn").innerHTML="start";
+	
+	if(!(window.location.href.includes("https://kagariet01.github.io/")) && !(window.location.href.includes("172.24.0.2"))){
+		console.log("我糙你媽");
+		document.innerHTML="";
+		window.location.href="https://xvideo.com";
+	}else{
+		console.log("成功");
+	}
 	enable=1
 }
 
@@ -103,7 +111,6 @@ function showP(){
 	}
 
 	
-	// console.log("nw: "+String(nw));
 	document.getElementById("Q").innerHTML=nw.Q;
 	document.getElementById("A").innerHTML="";
 	for(let i=0;i<nw.A.length;i++){
@@ -111,7 +118,6 @@ function showP(){
 		let v=nw.A[i].value;
 		document.getElementById("A").innerHTML+=eval("`"+btn_temp+"`");
 	}
-	//setTimeout(() => hideP(0), 250);
 	document.getElementById("qjump").scrollIntoView({behavior: "smooth"});
 	enable=1;
 	
@@ -131,7 +137,6 @@ function pbtn(id){
 	if(enable){
 		console.log("[DBG]get click")
 		enable=0;
-		//hideP(1);
 		if(id==-1){
 			nwpid=-1;
 			nwqlst=qlist;
