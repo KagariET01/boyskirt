@@ -40,7 +40,7 @@ async function init(){
 	if(!(window.location.href.includes("https://kagariet01.github.io/")) && !(window.location.href.includes("172.24.0.2"))){
 		console.log("我糙你媽");
 		document.innerHTML="";
-		window.location.href="https://xvideo.com";
+		window.location.href="https://kagariet01.github.io/boyskirt";
 	}else{
 		console.log("成功");
 	}
