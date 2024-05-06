@@ -54,7 +54,7 @@ function ed(){
 
 	if(ans=="")
 		if(score.ET01==10){
-			ans="開發者KagariET01最喜歡的自由主義"
+			ans="KagariET01最愛小ㄌㄌ了"
 		}
 	if(ans=="")
 		if(score["後現代主義"]>=20){
