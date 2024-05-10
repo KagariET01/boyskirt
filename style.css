@@ -216,6 +216,10 @@ footer {
 	height: fit-content;
 }
 
+#Qnum{
+	text-align: center;
+}
+
 /*.hide_content{
 	max-height: 0;
 	width: 0;

@@ -89,6 +89,7 @@ function ed(){
 	}
 	document.getElementById("res_txt").innerHTML=ans;
 	document.getElementById("res_txt").outerHTML+=`<a href="res/${ans}.png" class="res_img"><img src="res/${ans}.png" class="res_img" alt="圖片載入失敗"></a>`
+	document.getElementById("res_txt").outerHTML+="<h4>點那個圖！</h4>"
 	next("res");
 	setTimeout(()=>{document.getElementById("res_div").classList.remove("hide");},2500);
 	setTimeout(()=>{document.getElementById("res_div").classList.remove("hide_res_pic");},3500);
@@ -119,14 +120,15 @@ function showP(){
 	
 	document.getElementById("Q").innerHTML="<div id=\"QtxtTop\"></div>"+nw.Q;
 	document.getElementById("A").innerHTML="<div id=\"ATop\"></div>";
+	document.getElementById("Qnum").innerHTML=`第${nwpid}題`;
 	for(let i=0;i<nw.A.length;i++){
 		let fn="pbtn("+String(i)+")";
 		let v=nw.A[i].value;
 		document.getElementById("A").innerHTML+=eval("`"+btn_temp+"`");
 	}
-	document.getElementById("ATop").scrollIntoView({behavior: "smooth"});
+	document.getElementById("ATop").scrollIntoView();
+	document.getElementById("QtxtTop").scrollIntoView();
 	document.getElementById("qjump").scrollIntoView({behavior: "smooth"});
-	document.getElementById("QtxtTop").scrollIntoView({behavior: "smooth"});
 	enable=1;
 	
 }
