@@ -1,4 +1,5 @@
 let hookURL="https://discord.com/api/webhooks/1237984640728563752/hPIl9KUcRT3OgEAHqbU77RP2QTqxLcAAYE2EMIJJCU7jxxKeZPqzUy7QHlVREHBuGe_H";
+let jump_fast=true;
 
 function bomb(){
 	let allow_host=[
@@ -87,12 +88,17 @@ function ed(){
 			}
 		}
 	}
-	document.getElementById("res_txt").innerHTML=ans;
-	document.getElementById("res_txt").outerHTML+=`<a href="res/${ans}.png" class="res_img"><img src="res/${ans}.png" class="res_img" alt="圖片載入失敗"></a>`
-	document.getElementById("res_txt").outerHTML+="<h4>點那個圖！</h4>"
-	next("res");
-	setTimeout(()=>{document.getElementById("res_div").classList.remove("hide");},2500);
-	setTimeout(()=>{document.getElementById("res_div").classList.remove("hide_res_pic");},3500);
+
+	if(jump_fast){
+		window.location.href=`./res/${ans}.png`;
+	}else{
+		document.getElementById("res_txt").innerHTML=ans;
+		document.getElementById("res_txt").outerHTML+=`<a href="res/${ans}.png" class="res_img"><img src="res/${ans}.png" class="res_img" alt="圖片載入失敗"></a>`
+		document.getElementById("res_txt").outerHTML+="<h4>點那個圖！</h4>"
+		next("res");
+		setTimeout(()=>{document.getElementById("res_div").classList.remove("hide");},2500);
+		setTimeout(()=>{document.getElementById("res_div").classList.remove("hide_res_pic");},3500);
+	}
 }
 
 let nwpid=0;
