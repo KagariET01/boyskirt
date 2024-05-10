@@ -19,10 +19,10 @@ html {
 }
 
 .box{
-	background-color: #000a;
-	border:#fff 4px solid;
+	/*background-color: #000a;*/
+	/*border:#fff 4px solid;*/
 	color: #fff;
-	border-radius: 8px;
+	/*border-radius: 8px;*/
 }
 body {
 	margin: 0;
