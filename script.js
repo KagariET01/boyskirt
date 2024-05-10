@@ -156,6 +156,7 @@ function pbtn(id){
 		if(id==-1){
 			nwpid=-1;
 			nwqlst=qlist;
+			document.getElementById("body").classList.remove("bg");
 		}else{
 			if("action" in (nwqlst[nwpid].A[id])){
 				let act=nwqlst[nwpid].A[id].action;

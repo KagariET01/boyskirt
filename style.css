@@ -26,8 +26,8 @@ html {
 }
 body {
 	margin: 0;
-	background-image: url(./bg.png);
 	/*background-color: #000;*/
+	background-color: #1a224b;
 	color: #fff;
 	width: 100%;
 	height: 100%;
@@ -218,6 +218,10 @@ footer {
 
 #Qnum{
 	text-align: center;
+}
+
+.bg{
+	background-image: url(./bg.png);
 }
 
 /*.hide_content{
