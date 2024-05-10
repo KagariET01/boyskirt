@@ -47,6 +47,7 @@ body {
 	max-width: calc(100% - 2em);
 	width: -moz-fit-content;
 	width: fit-content;
+	height: fit-content;
 	margin:1em;
 }
 
@@ -88,9 +89,12 @@ a,a:visited,a:active,a:hover{
 
 #res_div{
 	box-sizing: border-box;
+	width: 75%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	overflow: auto;
+	height: 75%;
+	align-items: center;
 }
 
 .op{
@@ -98,7 +102,8 @@ a,a:visited,a:active,a:hover{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	flex-direction: column
+	flex-direction: column;
+	align-items: center;
 }
 
 .form {
@@ -186,6 +191,32 @@ footer {
 	background-color: #FAC6;
 }
 
+#st_btn{
+	min-width: 20%;
+}
+
+#res_div.hide_res_pic{
+	height: 5em;
+	overflow: hidden;
+	width: 75%;
+}
+
+#res_div.hide_res_pic.hide{
+	height: 5em;
+	overflow: hidden;
+	width: 0;
+}
+
+.res_img{
+	max-width: 100%;
+	max-height: 100%;
+	margin: 1em;
+	border-radius: 8px;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: fit-content;
+}
+
 /*.hide_content{
 	max-height: 0;
 	width: 0;
@@ -202,11 +233,6 @@ footer {
 	.A {
 		width: 50%;
 		height: 100%;
-	}
-
-	#res_div{
-		height: 10em;
-		width: calc(100% - 2em);
 	}
 
 	.form_sub{
@@ -239,11 +265,6 @@ footer {
 	.A {
 		height: 100%;
 		width: calc(100% - var(--Qsz));
-	}
-
-	#res_div{
-		height: 5em;
-		width: calc(50% - 2em);
 	}
 
 	.form_sub{
