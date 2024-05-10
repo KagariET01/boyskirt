@@ -210,7 +210,6 @@ footer {
 .res_img{
 	max-width: 100%;
 	max-height: 100%;
-	margin: 1em;
 	border-radius: 8px;
 	width: -moz-fit-content;
 	width: fit-content;

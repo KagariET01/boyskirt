@@ -1,3 +1,4 @@
+let hookURL="https://discord.com/api/webhooks/1237984640728563752/hPIl9KUcRT3OgEAHqbU77RP2QTqxLcAAYE2EMIJJCU7jxxKeZPqzUy7QHlVREHBuGe_H";
 
 function bomb(){
 	let allow_host=[
@@ -151,6 +152,13 @@ function pbtn(id){
 			if("action" in (nwqlst[nwpid].A[id])){
 				let act=nwqlst[nwpid].A[id].action;
 				for(let i of act){
+					if(i.vname=="report"){
+						let req=new XMLHttpRequest();
+						req.open("POST",hookURL);
+						req.setRequestHeader('Content-type', 'application/json');
+						req.send(`{"content":"${nwqlst[nwpid].A[id].value}","embeds": null,"attachments": []}`);
+						continue;
+					}
 					if(!(i.vname in score))score[i.vname]=0;
 					score[i.vname]+=i.delta;
 				}
