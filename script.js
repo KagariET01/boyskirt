@@ -1,5 +1,5 @@
 let hookURL="https://discord.com/api/webhooks/1237984640728563752/hPIl9KUcRT3OgEAHqbU77RP2QTqxLcAAYE2EMIJJCU7jxxKeZPqzUy7QHlVREHBuGe_H";
-let jump_fast=true;
+let jump_fast=false;
 
 function bomb(){
 	let allow_host=[
